@@ -20,6 +20,8 @@ class JournalUpdateView(UpdateView):
     model = Journal
     template_name = "journal/update_journal_form.html"
     fields = ['title', 'description']
+    success_url = reverse_lazy('journallist')
+
 
 class JournalDeleteView(DeleteView):
     model = Journal
